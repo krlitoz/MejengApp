@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:ffTransformations="using:FFImageLoading.Transformations"
+             x:Class="MejengApp.TeamDetail">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="teamLogo" x:DataType="Image"></Image>
+            <Label x:Name="name" FontSize="Large"/>
+
+
+
+
+            <ListView x:Name="ListViewFixtures">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="fixtureicon" />
+                                    <Label FontSize="Micro" Text="{Binding matchday}" VerticalOptions="FillAndExpand" />
+                                    <Label FontSize="Micro" Text="{Binding date}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical">
+                                    <Label FontSize="Micro" Text="{Binding homeTeamName}"/>
+                                    <Label FontSize="Micro" Text="{Binding awayTeamName}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical">
+                                    
+                                    <Label FontSize="Micro" Text="{Binding goalsHomeTeam}"/>
+                                    <Label FontSize="Micro" Text="{Binding goalsAwayTeam}"/>
+
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

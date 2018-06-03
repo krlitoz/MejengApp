@@ -11,7 +11,12 @@ namespace MejengApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            var mainPage = new RemoteContainerPage()
+            {
+                Title = "Leagues available"
+            };
+
+            MainPage = new NavigationPage(mainPage);
         }
 
         protected override void OnStart()

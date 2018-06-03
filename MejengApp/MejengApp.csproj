@@ -1,10 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
+    <PackageReference Include="System.Net.Http" Version="4.3.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.1.1" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.1.823" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.1.823" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Servicios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelos\MejengApp.Models.csproj" />
   </ItemGroup>
 </Project>
